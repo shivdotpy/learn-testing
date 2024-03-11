@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Input } from "./components/input";
+import { Input, Button } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Input />
+      <hr />
+      <Button />
     </div>
   );
 }
