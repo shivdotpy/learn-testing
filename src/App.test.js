@@ -8,3 +8,14 @@ test("Test App component", function () {
   expect(text).toBeInTheDocument();
   expect(title).toBeInTheDocument;
 });
+
+test("Testing input box", function () {
+  render(<App />);
+  let checkInput = screen.getByRole("textbox");
+  let checkInputPlaceholder = screen.getByPlaceholderText("Enter user name");
+  expect(checkInput).toBeInTheDocument();
+  expect(checkInputPlaceholder).toBeInTheDocument();
+  expect(checkInput).toHaveAttribute("name", "username");
+  expect(checkInput).toHaveAttribute("id", "userid");
+  expect(checkInput).toHaveAttribute("type", "text");
+});
